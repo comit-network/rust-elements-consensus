@@ -19,4 +19,3 @@ pub use crate::bindings::bitcoinconsensus_error_t_bitcoinconsensus_ERR_TX_INDEX;
 pub use crate::bindings::bitcoinconsensus_error_t_bitcoinconsensus_ERR_TX_SIZE_MISMATCH;
 pub use crate::bindings::bitcoinconsensus_verify_script;
 pub use crate::bindings::bitcoinconsensus_verify_script_with_amount;
-
