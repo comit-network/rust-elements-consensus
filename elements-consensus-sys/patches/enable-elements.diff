@@ -1,0 +1,13 @@
+diff --git a/src/primitives/transaction.cpp b/src/primitives/transaction.cpp
+index 3a54a9c8f..20dc6ecf7 100644
+--- a/src/primitives/transaction.cpp
++++ b/src/primitives/transaction.cpp
+@@ -11,7 +11,7 @@
+ 
+ #include <assert.h>
+ 
+-bool g_con_elementsmode = false;
++bool g_con_elementsmode = true;
+ 
+ const int32_t CTransaction::CURRENT_VERSION = 2;
+ 
