@@ -4,7 +4,7 @@ on:
   pull_request: # Need to run on pull-requests, otherwise PRs from forks don't run
   push:
     branches:
-      - main
+      - master
 
 jobs:
   static_analysis:
