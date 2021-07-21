@@ -190,7 +190,6 @@ LCOV_FILTER_PATTERN = \
 	-p "src/bench/" \
 	-p "src/univalue" \
 	-p "src/crypto/ctaes" \
-	-p "src/secp256k1" \
 	-p "depends"
 
 DIR_FUZZ_SEED_CORPUS ?= qa-assets/fuzz_seed_corpus

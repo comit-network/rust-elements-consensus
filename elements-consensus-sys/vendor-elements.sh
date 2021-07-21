@@ -38,10 +38,12 @@ git apply "../../patches/enable-elements.diff"
 
 # trim the fat
 git apply "../../patches/trim-elements.diff"
+git apply "../../patches/remove-secp256k1.diff"
 
 rm -rf "src/qt"
 rm -rf "src/test"
 rm -rf "test"
+rm -rf "src/secp256k1/src" # we link against rust-secp256k1
 
 cd ..
 echo "# This file was automatically created by $0" > ./elements-HEAD-revision.txt
