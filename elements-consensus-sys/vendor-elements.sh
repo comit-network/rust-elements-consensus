@@ -36,6 +36,13 @@ HEAD=$(git rev-parse HEAD)
 # enable global elements variable
 git apply "../../patches/enable-elements.diff"
 
+# trim the fat
+git apply "../../patches/trim-elements.diff"
+
+rm -rf "src/qt"
+rm -rf "src/test"
+rm -rf "test"
+
 cd ..
 echo "# This file was automatically created by $0" > ./elements-HEAD-revision.txt
 echo "$HEAD" >> ./elements-HEAD-revision.txt

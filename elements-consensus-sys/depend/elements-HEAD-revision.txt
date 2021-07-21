@@ -1,2 +1,2 @@
-# This file was automatically created by ./vendor-elements.sh
+# This file was automatically created by ./elements-consensus-sys/vendor-elements.sh
 0bc24d95a879a0411414e8e0fedfb2563f83c068
