@@ -47,6 +47,7 @@ rm -rf "src/secp256k1/src" # we link against rust-secp256k1
 rm -rf "src/leveldb" # not needed for consensus
 rm -rf "src/wallet" # not needed for consensus
 rm -rf "src/bench" # not needed for consensus
+rm -rf "src/rpc" # not needed for consensus
 
 cd ..
 echo "# This file was automatically created by $0" > ./elements-HEAD-revision.txt
