@@ -72,7 +72,7 @@ pub fn verify(
     // if ret != 1, err is set
     match err {
         elements_consensus_sys::bitcoinconsensus_error_t_bitcoinconsensus_ERR_OK => {
-            return Ok(Err(ConsensusViolation))
+            Ok(Err(ConsensusViolation))
         }
         elements_consensus_sys::bitcoinconsensus_error_t_bitcoinconsensus_ERR_TX_INDEX => {
             unreachable!("because of (1)")
