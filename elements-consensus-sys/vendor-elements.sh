@@ -40,6 +40,7 @@ git apply "../../patches/enable-elements.diff"
 git apply "../../patches/trim-elements.diff"
 git apply "../../patches/remove-secp256k1.diff"
 git apply "../../patches/remove-doc.diff"
+git apply "../../patches/remove-share.diff"
 
 rm -rf "src/qt"
 rm -rf "src/test"
@@ -50,6 +51,7 @@ rm -rf "src/wallet" # not needed for consensus
 rm -rf "src/bench" # not needed for consensus
 rm -rf "src/rpc" # not needed for consensus
 rm -rf "doc" # not needed for consensus
+rm -rf "share" # not needed for consensus
 
 cd ..
 echo "# This file was automatically created by $0" > ./elements-HEAD-revision.txt
