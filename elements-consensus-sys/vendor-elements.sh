@@ -44,6 +44,7 @@ rm -rf "src/qt"
 rm -rf "src/test"
 rm -rf "test"
 rm -rf "src/secp256k1/src" # we link against rust-secp256k1
+rm -rf "src/leveldb" # not needed for consensus
 
 cd ..
 echo "# This file was automatically created by $0" > ./elements-HEAD-revision.txt
