@@ -5,7 +5,8 @@
   },
   "includes": ["**/*.{md,rs}"],
   "excludes": [
-    "elements-consensus-sys/depend"
+    "elements-consensus-sys/depend",
+    "target"
   ],
   "plugins": [
     "https://plugins.dprint.dev/markdown-0.9.2.wasm",
