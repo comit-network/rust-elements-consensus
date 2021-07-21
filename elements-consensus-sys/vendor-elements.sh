@@ -57,6 +57,7 @@ rm -rf "share" # not needed for consensus
 rm -rf "contrib" # not needed for consensus
 rm -rf "depends" # not needed for consensus
 rm -rf "src/univalue" # not needed for consensus
+rm -rf "build_msvc" # not needed for consensus
 
 cd ..
 echo "# This file was automatically created by $0" > ./elements-HEAD-revision.txt
