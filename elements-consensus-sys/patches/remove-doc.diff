@@ -1,0 +1,29 @@
+diff --git a/Makefile.am b/Makefile.am
+index 5de1afc..f0bbe9e 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -8,9 +8,6 @@ print-%:
+ 
+ ACLOCAL_AMFLAGS = -I build-aux/m4
+ SUBDIRS = src
+-if ENABLE_MAN
+-SUBDIRS += doc/man
+-endif
+ .PHONY: deploy FORCE
+ 
+ export PYTHONPATH
+diff --git a/configure.ac b/configure.ac
+index 67ee464..fae8079 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1700,9 +1700,8 @@ AC_SUBST(HAVE_BUILTIN_PREFETCH)
+ AC_SUBST(HAVE_MM_PREFETCH)
+ AC_SUBST(HAVE_STRONG_GETAUXVAL)
+ AC_SUBST(HAVE_WEAK_GETAUXVAL)
+-AC_CONFIG_FILES([Makefile src/Makefile doc/man/Makefile share/setup.nsi share/qt/Info.plist])
++AC_CONFIG_FILES([Makefile src/Makefile share/setup.nsi share/qt/Info.plist])
+ AC_CONFIG_FILES([contrib/devtools/split-debug.sh],[chmod +x contrib/devtools/split-debug.sh])
+-AM_COND_IF([HAVE_DOXYGEN], [AC_CONFIG_FILES([doc/Doxyfile])])
+ AC_CONFIG_LINKS([contrib/devtools/security-check.py:contrib/devtools/security-check.py])
+ AC_CONFIG_LINKS([contrib/devtools/test-security-check.py:contrib/devtools/test-security-check.py])
+ AC_CONFIG_LINKS([contrib/filter-lcov.py:contrib/filter-lcov.py])
