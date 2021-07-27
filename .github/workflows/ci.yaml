@@ -34,11 +34,9 @@ jobs:
   test:
     strategy:
       matrix:
-        rust: [
-            stable,
-            nightly
-        ]
-    runs-on: ubuntu-latest
+        rust: [ stable, nightly ]
+        os: [ ubuntu-latest, macos-latest ]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2.3.4
 
@@ -50,5 +48,8 @@ jobs:
           profile: minimal
 
       - uses: Swatinem/rust-cache@v1.3.0
+
+      - run: brew install automake
+        if: matrix.os == 'macos-latest'
 
       - run: cargo test

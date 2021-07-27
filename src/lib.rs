@@ -95,6 +95,8 @@ pub fn verify(
 
 #[cfg(test)]
 mod tests {
+    extern crate link_cplusplus;
+
     use super::*;
     use elements::encode::deserialize;
     use hex_literal::hex;
