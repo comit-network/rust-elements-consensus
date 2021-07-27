@@ -11,3 +11,4 @@ elements = "0.17"
 
 [dev-dependencies]
 hex-literal = "0.3"
+link-cplusplus = "1"

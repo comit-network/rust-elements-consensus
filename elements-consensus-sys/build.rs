@@ -23,7 +23,6 @@ fn main() {
 
     // Simply link the library without using pkg-config
     println!("cargo:rustc-link-search=native={}/lib", dst.display());
-    println!("cargo:rustc-link-lib=dylib=stdc++");
     println!("cargo:rustc-link-lib=static=elementsconsensus");
 
     let binding_file = out_dir().join("bindings.rs");
