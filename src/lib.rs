@@ -38,7 +38,7 @@ pub fn verify(
     index: usize,
     transaction: &Transaction,
 ) -> Result<Result<(), ConsensusViolation>, IndexOutOfBounds> {
-    if transaction.input.len() < index {
+    if transaction.input.len() <= index {
         // (1)
         return Err(IndexOutOfBounds);
     }
@@ -100,6 +100,22 @@ mod tests {
     use super::*;
     use elements::encode::deserialize;
     use hex_literal::hex;
+
+    #[test]
+    fn index_out_of_bounds_protects_from_unreachable_1() {
+        let transaction = Transaction {
+            version: 2,
+            lock_time: 0,
+            input: Vec::new(),
+            output: Vec::new(),
+        };
+
+        let result0 = verify(Script::new(), &confidential::Value::Null, 0, &transaction);
+        let result1 = verify(Script::new(), &confidential::Value::Null, 1, &transaction);
+
+        result0.expect_err("index equal to input list length");
+        result1.expect_err("index greater than input list length");
+    }
 
     #[test]
     fn mainnet_transaction_verifies() {
