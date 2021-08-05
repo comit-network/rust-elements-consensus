@@ -7,7 +7,7 @@ edition = "2018"
 
 [dependencies]
 elements-consensus-sys = { path = "./elements-consensus-sys" }
-elements = "0.17"
+elements = "0.18"
 
 [dev-dependencies]
 hex-literal = "0.3"
