@@ -1,3 +1,6 @@
+
+pub extern crate elements;
+
 use elements::{confidential, encode::serialize, Script, Transaction};
 use std::{error::Error, fmt};
 
